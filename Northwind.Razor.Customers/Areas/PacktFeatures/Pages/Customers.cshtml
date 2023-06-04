@@ -1,0 +1,27 @@
+﻿@page
+@using Packt.Shared
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model PacktFeatures.Pages.CustomersPageModel
+
+    <div class="row">
+        <h1 class="display-2">Customers</h1>
+    </div>
+
+    <div class="row" data-masonry='{"percentPosition": true}'>
+    @foreach (var item in Model.CountryCustomers)
+    {
+        <div class="col-sm-3">            
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    <h5 class="card-title">@item.Key</h5>
+                </div>
+                <div class="card-body text-dark">
+                    @foreach (var value in item.Value)
+                    {              
+                        <p class="card-text">@value.CompanyName</p>
+                    }
+                </div>
+            </div> 
+        </div>
+    }
+    </div>

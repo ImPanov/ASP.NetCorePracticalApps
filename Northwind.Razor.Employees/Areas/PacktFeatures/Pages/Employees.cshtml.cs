@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Packt.Shared;
 
-namespace PacktFearures.Pages
+namespace PacktFeatures.Pages
 {
     public class EmployeesPageModel : PageModel
     {

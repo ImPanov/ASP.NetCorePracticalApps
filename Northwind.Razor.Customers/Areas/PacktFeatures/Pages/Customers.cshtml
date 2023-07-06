@@ -2,7 +2,9 @@
 @using Packt.Shared
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model PacktFeatures.Pages.CustomersPageModel
-
+@section Scripts {
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+}
     <div class="row">
         <h1 class="display-2">Customers</h1>
     </div>
@@ -18,7 +20,7 @@
                 <div class="card-body text-dark">
                     @foreach (var value in item.Value)
                     {              
-                        <p class="card-text">@value.CompanyName</p>
+                        <a class="link-underline link-underline-opacity-0" asp-area="PacktFeatures" asp-page="Customer" asp-route-id="@value.CustomerId"><p class="card-text">@value.ContactName</p></a>
                     }
                 </div>
             </div> 

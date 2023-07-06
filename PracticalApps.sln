@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Web", "Northwind.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Razor.Employees", "Northwind.Razor.Employees\Northwind.Razor.Employees.csproj", "{D607A899-0DC4-4FEB-9738-DBC798601678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Razor.Customers", "Northwind.Razor.Customers\Northwind.Razor.Customers.csproj", "{D2558CFB-4D6C-4C2A-8DB0-A48426AD7CB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Razor.Customers", "Northwind.Razor.Customers\Northwind.Razor.Customers.csproj", "{D2558CFB-4D6C-4C2A-8DB0-A48426AD7CB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

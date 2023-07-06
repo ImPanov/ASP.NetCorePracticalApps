@@ -15,6 +15,10 @@
     <ProjectReference Include="..\Northwind.Common.DataContext.SqlServer\Northwind.Common.DataContext.SqlServer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\PacktFeatures\Pages\Shared\" />
+  </ItemGroup>
+
 
 
 </Project>

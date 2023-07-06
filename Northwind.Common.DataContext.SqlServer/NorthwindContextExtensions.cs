@@ -24,6 +24,7 @@ public static class NorthwindContextExtensions
             options.LogTo(WriteLine, // Console
             new[] { Microsoft.EntityFrameworkCore
  .Diagnostics.RelationalEventId.CommandExecuting });
+
         });
         return services;
     }

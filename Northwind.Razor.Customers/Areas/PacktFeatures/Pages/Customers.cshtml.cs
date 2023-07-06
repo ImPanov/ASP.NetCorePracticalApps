@@ -15,14 +15,7 @@ namespace PacktFeatures.Pages
         public void OnGet()
         {
             CountryCustomers = db.Customers.GroupBy(c=>c.Country).ToDictionary(c=>c.Key,c=>c.ToList());
-            foreach (var item in CountryCustomers)
-            {
-                Console.WriteLine(item.Key);
-                foreach (var em in item.Value)
-                {
-                    Console.WriteLine(em.ContactName);
-                }
-            }
         }
+        
     }
 }

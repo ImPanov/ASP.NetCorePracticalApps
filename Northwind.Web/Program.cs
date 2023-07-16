@@ -5,7 +5,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddRequestDecompression();
 builder.WebHost.ConfigureKestrel((context, options) =>
 {
-    options.ListenAnyIP(7298, listenOptions =>
+    options.ListenAnyIP(5001, listenOptions =>
     {
         listenOptions.Protocols = HttpProtocols.Http1AndHttp2AndHttp3;
         listenOptions.UseHttps();

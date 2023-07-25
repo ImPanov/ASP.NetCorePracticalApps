@@ -1,0 +1,28 @@
+﻿@using Packt.Shared
+@model IEnumerable<Product> 
+<div class="row">
+    <div class="col-md-12">
+    <h1>Northwind</h1>
+        @if (Model is not null)
+        {
+                <h2>Products of the @ViewData["Title"] category</h2>
+                <div id="product-columns">
+                    <ul class="list-group">
+                    @foreach (Product p in @Model)
+                    {
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div>
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductId" class="btn btn-outline-primary">
+                                        <div class="ms-2 me-auto">@p.ProductName</div>
+                                        <span class="badge bg-primary rounded-pill">
+                                        @(p.UnitPrice is null ? "zero" : p.UnitPrice.Value.ToString("C"))
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                    }
+                    </ul>
+                </div>
+        }
+    </div>
+</div>

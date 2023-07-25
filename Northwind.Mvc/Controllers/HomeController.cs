@@ -81,5 +81,20 @@ namespace Northwind.Mvc.Controllers
             ViewData["MaxPrice"] = price.Value.ToString("C");
             return View(model);
         }
+
+        public async Task<IActionResult> Category(int? id)
+        {
+            if(!id.HasValue)
+            {
+                return BadRequest("You must pass a product price in the query string, for example, /Home/Category/2");
+            }
+            IEnumerable<Product> model = db.Products.Where(p => p.CategoryId == id);
+            if (!model.Any())
+            {
+                return NotFound($"CategoryId {id} not found");
+            }
+            ViewData["Title"] = model.First().Category;
+            return View(model);
+        }
     }
 }
